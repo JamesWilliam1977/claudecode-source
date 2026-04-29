@@ -1,0 +1,345 @@
+# Instincts generated from https://github.com/JamesWilliam1977/claudecode-source
+# Generated: 2026-04-29T06:25:02.992Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: claudecode-source-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Commit Length
+
+## Action
+
+Keep commit messages concise (~40 characters)
+
+## Evidence
+
+- Average commit message length: 40 chars
+- Based on 7 commits
+
+---
+id: claudecode-source-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: claudecode-source-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: claudecode-source-workflow-update-provider-docs-multiple-locales
+trigger: "when doing update provider docs multiple locales"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Workflow Update Provider Docs Multiple Locales
+
+## Action
+
+Follow the update-provider-docs-multiple-locales workflow:
+1. Edit or add provider section in the main providers.mdx file.
+2. Replicate the change across all locale-specific providers.mdx files.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: packages/web/src/content/docs/ar/providers.mdx, packages/web/src/content/docs/bs/providers.mdx, packages/web/src/content/docs/da/providers.mdx
+
+---
+id: claudecode-source-workflow-ignore-api-specs
+trigger: "when doing ignore api specs"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Workflow Ignore Api Specs
+
+## Action
+
+Follow the ignore-api-specs workflow:
+1. Edit packages/opencode/specs/v2/api.ts with new ideas or notes.
+2. Commit with an 'ignore' message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: packages/opencode/specs/v2/api.ts
+
+---
+id: claudecode-source-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: claudecode-source-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: claudecode-source-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: claudecode-source-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: claudecode-source-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Import Style
+
+## Action
+
+Use either default or named imports as appropriate (mixed style allowed)
+
+## Evidence
+
+- importStyle: mixed
+
+---
+id: claudecode-source-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- exportStyle: named
+
+---
+id: claudecode-source-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Test Location
+
+## Action
+
+Place test files in mixed locations (not strictly separated from source)
+
+## Evidence
+
+- testLocation: mixed
+
+---
+id: claudecode-source-instinct-test-pattern
+trigger: "When writing tests for a module"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Test Pattern
+
+## Action
+
+Co-locate test files near the modules they test or in a relevant package folder
+
+## Evidence
+
+- testLocation: mixed
+- monorepo structure with packages/
+
+---
+id: claudecode-source-instinct-commit-prefix
+trigger: "When making a git commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a prefix indicating the type of change (e.g., feat, fix, docs, refactor, ignore)
+
+## Evidence
+
+- Seen in commit: 'feat: make it easier to toggle on/off paste summary in the tui (#24869)'
+- Seen in commit: 'fix(session): remap compaction tail_start_id when forking (#24898)'
+- Pattern in commits.prefixes
+
+---
+id: claudecode-source-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (around 40 characters on average)
+
+## Evidence
+
+- commits.averageLength: 40
+
+---
+id: claudecode-source-instinct-update-provider-docs
+trigger: "When adding or updating provider documentation for all supported languages/locales"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Update Provider Docs
+
+## Action
+
+Edit the main providers.mdx file, then replicate the change across all locale-specific providers.mdx files
+
+## Evidence
+
+- Workflow: update-provider-docs-multiple-locales
+- Example commit sequence and files
+
+---
+id: claudecode-source-instinct-ignore-api-specs
+trigger: "When saving or ignoring changes/ideas in the API specification without functional impact"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/claudecode-source
+---
+
+# Claudecode Source Instinct Ignore Api Specs
+
+## Action
+
+Edit packages/opencode/specs/v2/api.ts and commit with an 'ignore' message
+
+## Evidence
+
+- Workflow: ignore-api-specs
+- Example commit: 'ignore: ideas' on packages/opencode/specs/v2/api.ts
+
